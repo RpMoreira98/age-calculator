@@ -22,9 +22,5 @@ form.addEventListener('submit', (e) => {
         dayOut.innerHTML = dayResult;
         monthOut.innerHTML = monthResult;
         yearOut.innerHTML = yearResult;
-
-        document.getElementById('day').value = "";
-        document.getElementById('month').value = "";
-        document.getElementById('year').value = "";
     } 
 })
