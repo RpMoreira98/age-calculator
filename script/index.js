@@ -14,15 +14,17 @@ form.addEventListener('submit', (e) => {
     const year = parseInt(yearInp, 10);
     let input = new Date(year, month, day)
     let date = new Date();;
-    const dayResult = parseInt((date - input)/(1000 * 60 * 60 * 24),10);
+    const dayResult = parseInt((date - input) / (1000 * 60 * 60 * 24), 10);
     const yearResult = parseInt(dayResult / 365)
     const monthResult = month <= date.getMonth() ? parseInt(date.getMonth() - month) : date.getMonth();
 
-    if(input) {
+    if (input) {
         dayOut.innerHTML = dayResult;
         monthOut.innerHTML = monthResult;
         yearOut.innerHTML = yearResult;
-    } else {
-        alert('Data invalida')
-    }
+
+        document.getElementById('day').value = "";
+        document.getElementById('month').value = "";
+        document.getElementById('year').value = "";
+    } 
 })
